@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Company/Team Management System</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>80</y>
+      <width>721</width>
+      <height>361</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>2</number>
+    </property>
+    <widget class="QWidget" name="pageMember">
+     <widget class="QPushButton" name="btnAddMember">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>30</y>
+        <width>151</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Add Member</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnDeleteMember">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>70</y>
+        <width>151</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Delete Member</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnEditMember">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>110</y>
+        <width>151</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Edit Member</string>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="tableMember">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>30</y>
+        <width>511</width>
+        <height>261</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnSearch">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>0</y>
+        <width>81</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Search</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="pageTask">
+     <widget class="QPushButton" name="btnNewTask">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>30</y>
+        <width>141</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>New Task</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnDeleteTask">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>70</y>
+        <width>141</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Delete Task</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnAssignTask">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>110</y>
+        <width>141</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Assign Task</string>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="tableTask">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>30</y>
+        <width>511</width>
+        <height>261</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnSearch_2">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>0</y>
+        <width>81</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Search</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnEditTask">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>150</y>
+        <width>141</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Edit Task</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="pageProject"/>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>0</y>
+      <width>81</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>:/images/75size.png</pixmap>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="actionMember">
+    <property name="title">
+     <string>Member Management</string>
+    </property>
+    <addaction name="actionAdd_members"/>
+   </widget>
+   <widget class="QMenu" name="actionTask">
+    <property name="title">
+     <string>Task Management</string>
+    </property>
+    <addaction name="actionCreate_a_new_task"/>
+   </widget>
+   <widget class="QMenu" name="actionTracker">
+    <property name="title">
+     <string>Tracker</string>
+    </property>
+    <addaction name="actionHomePage"/>
+   </widget>
+   <addaction name="actionMember"/>
+   <addaction name="actionTask"/>
+   <addaction name="actionTracker"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionTask_Management">
+   <property name="text">
+    <string>Add members</string>
+   </property>
+  </action>
+  <action name="actionRemove_members">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Remove members</string>
+   </property>
+  </action>
+  <action name="actionMember_list">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Member list</string>
+   </property>
+  </action>
+  <action name="actionCreate_a_new_task">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>HomePage</string>
+   </property>
+  </action>
+  <action name="actionAssign_a_task">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Assign a task</string>
+   </property>
+  </action>
+  <action name="actionTask_list">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Task list</string>
+   </property>
+  </action>
+  <action name="actionCreate_a_new_project">
+   <property name="text">
+    <string>Create a new project</string>
+   </property>
+  </action>
+  <action name="actionOpen_a_project">
+   <property name="text">
+    <string>Open a project</string>
+   </property>
+  </action>
+  <action name="actionProject_settings">
+   <property name="text">
+    <string>Project settings</string>
+   </property>
+  </action>
+  <action name="actionAdd_members">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>HomePage</string>
+   </property>
+  </action>
+  <action name="actionHomePage">
+   <property name="text">
+    <string>HomePage</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>
