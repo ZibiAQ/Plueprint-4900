@@ -1,4 +1,4 @@
-Project Management System (PySide6)
+PluePrint
 A lightweight desktop Project Management System built with PySide6.
 This application allows users to manage tasks and team members with a clean business-style interface.
 
