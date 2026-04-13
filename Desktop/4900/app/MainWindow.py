@@ -1,9 +1,9 @@
 import sys
 from PySide6.QtWidgets import QApplication, QMainWindow, QLabel , QInputDialog , QTableWidgetItem, QAbstractItemView, QTableWidget, QLineEdit
-from PySide6.QtCore import Qt
+from PySide6.QtCore import Qt, QEvent, QTimer
 import MemeberManage.SearchMemberDialog as SearchMemberDialog
 from TaskManage.EditTaskDialog import EditTaskDialog
-from Ui_mainWindow import Ui_MainWindow
+from ui.Ui_mainWindow import Ui_MainWindow
 from MemeberManage.DeleteMemberDialog import DeleteMemberDialog
 from MemeberManage.EditMemberDialog import EditMemberDialog
 from MemeberManage.SearchMemberDialog import SearchMemberDialog
@@ -12,6 +12,7 @@ from TaskManage.NewTaskDialog import NewTaskDialog
 from TaskManage.DeleteTaskDialog import DeleteTaskDialog
 from TaskManage.AssignTaskDIalog import AssignTaskDialog
 from TaskManage.SearchTaskDialog import SearchTaskDialog
+from .FloatingPill import FloatingPill
 import json
 import os
 
@@ -75,10 +76,31 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.setup_home_page()
         self.refresh_home_page()
 
-        
-      
-    
+        self.floatingPill = FloatingPill(self)
 
+    def changeEvent(self, event):
+        if event.type() == QEvent.Type.WindowStateChange:
+            if self.windowState() & Qt.WindowState.WindowMinimized:
+                QTimer.singleShot(0, self.minimize_to_floating)
+        super().changeEvent(event)
+
+    def minimize_to_floating(self):
+        self.setWindowState(Qt.WindowState.WindowNoState)
+        self.hide()
+        self.floatingPill.place_default()
+        self.floatingPill.show()
+
+    def restore_from_floating(self):
+        self.floatingPill.hide()
+        self.showNormal()
+        self.show()
+        self.raise_()
+        self.activateWindow()
+
+    def closeEvent(self, event):
+        self.floatingPill.close()
+        QApplication.quit()
+        event.accept()
 
     def load_data(self):
         if os.path.exists("data.json"):
@@ -321,7 +343,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
 if __name__ == "__main__":
     from PySide6.QtWidgets import QDialog
-    from login import LoginWindow
+    from .login import LoginWindow
 
     app = QApplication(sys.argv)
     dlg = LoginWindow()

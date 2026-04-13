@@ -1,6 +1,6 @@
 import sys
 from PySide6.QtWidgets import QApplication, QDialog, QMessageBox, QLineEdit
-from Ui_login import Ui_Form
+from ui.Ui_login import Ui_Form
 
 
 class LoginWindow(QDialog, Ui_Form):
@@ -21,7 +21,7 @@ class LoginWindow(QDialog, Ui_Form):
 
 
 if __name__ == "__main__":
-    from MainWindow import MainWindow
+    from .MainWindow import MainWindow
 
     app = QApplication(sys.argv)
     dlg = LoginWindow()

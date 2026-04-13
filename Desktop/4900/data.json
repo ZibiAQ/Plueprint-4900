@@ -72,10 +72,25 @@
             "status": "Completed"
         },
         {
-            "title": "123",
-            "detail": "123",
+            "title": "login",
+            "detail": "make a login for project",
             "assigned_members": [],
-            "status": "In Progress"
+            "status": "Completed",
+            "assigned_member": "aoqing"
+        },
+        {
+            "title": "FloatingPill",
+            "detail": "after minimize it will create a floatingpill on screen.",
+            "assigned_members": [],
+            "status": "Completed",
+            "assigned_member": "aoqing"
+        },
+        {
+            "title": "2nd demo record",
+            "detail": "due 4-13 ",
+            "assigned_members": [],
+            "status": "Completed",
+            "assigned_member": "aoqing"
         }
     ]
 }
