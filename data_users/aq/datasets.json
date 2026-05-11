@@ -1,0 +1,14 @@
+{
+    "schema_version": 1,
+    "current_dataset_id": "default",
+    "datasets": [
+        {
+            "id": "default",
+            "name": "main"
+        },
+        {
+            "id": "8d27d8424c998d4f",
+            "name": "project123"
+        }
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "schema_version": 1,
+    "users": {
+        "Aoqing": {
+            "salt_hex": "93efdb65896c8542668f76c24f2c11fe",
+            "pw_hash_hex": "4ef05e64dfb187c4ea1648e93ad5209510963e6aac0bd3f162c678aaf6cf9247"
+        },
+        "aoqing": {
+            "salt_hex": "a888ebdf6f3b884a0c4ca12dbe4a658f",
+            "pw_hash_hex": "9631e8283ce5f0b8d2f163a316483717875cf2ae851c36f2c4038a72079657f3"
+        },
+        "aq": {
+            "salt_hex": "752dc6887a52c87f1eb783c3739619a6",
+            "pw_hash_hex": "eac08d7bb8534be277c16a4aa1dae67341547b747d126fe253986fee31668399"
+        },
+        "aq123": {
+            "salt_hex": "3fac3d486d9281906ed8c29c53669a24",
+            "pw_hash_hex": "b7878a1003ee917aeac2aeacc5c671c76b8e746992385307369e3443fc51b333"
+        }
+    }
+}
